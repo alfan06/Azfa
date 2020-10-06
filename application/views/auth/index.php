@@ -1,5 +1,4 @@
 <div class="hero-wrap js-fullheight" style="background-image: url('assets/index/images/bg_1.jpg');" data-stellar-background-ratio="1">
-    <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
             <div class="col-md-7 ftco-animate mt-5" data-scrollax=" properties: { translateY: '70%' }">
@@ -74,14 +73,14 @@
                     <div class="divider text-center"><span>Tue. Feb 21, 2019; FIFA Champions League</span></div>
                     <div class="d-sm-flex mb-4">
                         <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: <?= base_url('assets/index/images/team-1.jpg') ?>;"></div>
+                            <div class="img logo" style="background-image: url('assets/index/images/team-1.jpg');"></div>
                             <div class="text-center px-1 px-md-3 desc">
                                 <h3 class="score win"><span>3</span></h3>
                                 <h4 class="team-name">Knight Warrior</h4>
                             </div>
                         </div>
                         <div class="sport-team d-flex align-items-center">
-                            <div class="img logo order-sm-last" style="background-image: <?= base_url('assets/index/images/team-2.jpg') ?>;"></div>
+                            <div class="img logo order-sm-last" style="background-image: url('assets/index/images/team-2.jpg');">
                             <div class="text-center px-1 px-md-3 desc">
                                 <h3 class="score lost"><span>1</span></h3>
                                 <h4 class="team-name">Mighty Falcons</h4>
@@ -94,14 +93,14 @@
                 </div>
             </div>
             <div class="col-lg-6 d-flex align-items-stretch">
-                <div class="img d-flex align-items-center justify-content-center py-5" style="background-image: <?= base_url('assets/index/images/victory.jpg') ?>; width: 100%;">
-                    <p class="text-center mb-0 py-5">
-                        <a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
-                            <span class="ion-ios-play"></span>
-                        </a>
-                        <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
-                    </p>
-                </div>
+                <img class="img d-flex align-items-center justify-content-center py-5" style="width: 100%;" src="<?= base_url('assets/index/images/victory.jpg'); ?>" alt="">
+                <p class="text-center mb-0 py-5">
+                    <a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
+                        <span class="ion-ios-play"></span>
+                    </a>
+                    <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
+                </p>
+                </img>
             </div>
         </div>
     </div>
@@ -119,7 +118,7 @@
                 <div class="item">
                     <div class="game-schedule">
                         <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: <?= base_url('assets/index/images/team-1.jpg') ?>;"></div>
+                            <img class="img logo" src="<?= base_url('assets/index/images/team-1.jpg'); ?>" alt="">
                             <div class="pl-4 desc">
                                 <span class="venue">Home @ Arena</span>
                                 <h4 class="team-name">Knight Warrior</h4>
@@ -143,7 +142,7 @@
                 <div class="item">
                     <div class="game-schedule">
                         <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: <?= base_url('assets/index/images/team-3.jpg') ?>;"></div>
+                            <img class="img logo" src="<?= base_url('assets/index/images/team-3.jpg'); ?>" alt="">
                             <div class="pl-4 desc">
                                 <span class="venue">Home @ Arena</span>
                                 <h4 class="team-name">Knight Warrior</h4>
@@ -155,7 +154,7 @@
                 <div class="item">
                     <div class="game-schedule">
                         <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: <?= base_url('assets/index/images/team-4.jpg') ?>;"></div>
+                            <img class="img logo" src="<?= base_url('assets/index/images/team-4.jpg'); ?>" alt="">
                             <div class="pl-4 desc">
                                 <span class="venue">Home @ Arena</span>
                                 <h4 class="team-name">Knight Warrior</h4>
@@ -167,7 +166,7 @@
                 <div class="item">
                     <div class="game-schedule">
                         <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: <?= base_url('assets/index/images/team-5.jpg') ?>;"></div>
+                            <img class="img logo" style="<?= base_url('assets/index/images/team-5.jpg'); ?>">
                             <div class="pl-4 desc">
                                 <span class="venue">Home @ Arena</span>
                                 <h4 class="team-name">Knight Warrior</h4>
@@ -179,7 +178,7 @@
                 <div class="item">
                     <div class="game-schedule">
                         <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: <?= base_url('assets/index/images/team-6.jpg') ?>;"></div>
+                            <img class="img logo" src="<?= base_url('assets/index/images/team-6.jpg'); ?>" alt="">
                             <div class="pl-4 desc">
                                 <span class="venue">Home @ Arena</span>
                                 <h4 class="team-name">Knight Warrior</h4>
@@ -236,7 +235,7 @@
     </div>
 </section>
 
-<section class="ftco-section ftco-team img" style="background-image:url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+<section class="ftco-section ftco-team img" style="background-image:url(assets/index/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row justify-content-center pb-5">
@@ -251,7 +250,7 @@
                 <div class="carousel-team owl-carousel">
                     <div class="item">
                         <div class="team-wrap text-center">
-                            <div class="img" style="background-image: <?= base_url('assets/index/images/staff-1.jpg') ?>;"></div>
+                            <img class="img" src="<?= base_url('assets/index/images/staff-1.jpg'); ?>" alt="">
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Wide Receiver</span>
@@ -260,7 +259,7 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
-                            <div class="img" style="background-image: <?= base_url('assets/index/images/staff-2.jpg') ?>;"></div>
+                            <img class="img" src="<?= base_url('assets/index/images/staff-2.jpg'); ?>" alt=""></img>
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Tight End</span>
@@ -269,7 +268,7 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
-                            <div class="img" style="background-image: <?= base_url('assets/index/images/staff-3.jpg') ?>;"></div>
+                            <img class="img" src="<?= base_url('assets/index/images/staff-3.jpg'); ?>" alt="">
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Defensive</span>
@@ -278,7 +277,7 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
-                            <div class="img" style="background-image: <?= base_url('assets/index/images/staff-4.jpg') ?>;"></div>
+                            <img class="img" src="<?= base_url('assets/index/images/staff-4.jpg'); ?>" alt="">
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Quarterback</span>
@@ -287,7 +286,7 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
-                            <div class="img" style="background-image: <?= base_url('assets/index/images/staff-5.jpg') ?>;"></div>
+                            <img class="img" src="<?= base_url('assets/index/images/staff-5.jpg'); ?>" alt="">
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Runing Back</span>
@@ -296,7 +295,7 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
-                            <div class="img" style="background-image: <?= base_url('assets/index/images/staff-6.jpg') ?>;"></div>
+                            <img class="img" src="<?= base_url('assets/index/images/staff-6.jpg'); ?>" alt="">
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Center</span>
@@ -305,7 +304,7 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
-                            <div class="img" style="background-image: <?= base_url('assets/index/images/staff-7.jpg') ?>;"></div>
+                            <img class="img" src="<?= base_url('assets/index/images/staff-7.jpg'); ?>" alt="">
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Offensive Guard</span>
@@ -321,7 +320,7 @@
     <div class="container">
         <div class="row d-flex">
             <div class="col-md-6 d-flex">
-                <div class="img d-flex align-self-stretch" style="background-image:<?= base_url('assets/index/images/about.jpg') ?>;"></div>
+                <img class="img d-flex align-self-stretch" src="<?= base_url('assets/index/images/about.jpg'); ?>" alt="">
             </div>
             <div class="col-md-6 pl-lg-5 py-5">
                 <div class="row justify-content-start pb-3">
@@ -370,7 +369,7 @@
 </section>
 
 
-<section class="ftco-section testimony-section" style="background-image: <?= base_url('assets/index/images/bg_2.jpg') ?>;" data-stellar-background-ratio="0.5">
+<section class="ftco-section testimony-section" style="background-image: url('assets/index/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
@@ -384,7 +383,7 @@
                 <div class="carousel-testimony owl-carousel ftco-owl">
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image:<?= base_url('assets/index/images/person_1.jpg') ?>">
+                            <div class="user-img mb-4" style="background-image: url('assets/index/images/person_1.jpg');">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -398,7 +397,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image: <?= base_url('assets/index/images/person_2.jpg') ?>">
+                            <div class="user-img mb-4" style="background-image:url('assets/index/images/person_2.jpg')">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -412,7 +411,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image: <?= base_url('assets/index/images/person_3.jpg') ?>">
+                            <div class="user-img mb-4" style="background-image:url('assets/index/images/person_3.jpg')">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -426,7 +425,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image: <?= base_url('assets/index/images/person_4.jpg') ?>">
+                            <div class="user-img mb-4" style="background-image:url('assets/index/images/person_4.jpg');">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -440,7 +439,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image: <?= base_url('assets/index/images/person_3.jpg') ?>">
+                            <div class="user-img mb-4" style="background-image:url('assets/index/images/person_3.jpg');">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -469,7 +468,7 @@
         <div class="row d-flex">
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_1.jpg');">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -487,7 +486,7 @@
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_2.jpg');">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -505,7 +504,7 @@
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_3.jpg');">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 mb-4 topp">
@@ -523,7 +522,7 @@
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_4.jpg');">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -543,7 +542,7 @@
     </div>
 </section>
 
-<section class="ftco-subscribe img" style="background-image: <?= base_url('assets/index/images/bg_1.jpg') ?>;">
+<section class="ftco-subscribe img" style="background-image: url('assets/index/images/bg_1.jpg');">
     <div class="overlay">
         <div class="container">
             <div class="row d-flex justify-content-center">
