@@ -93,6 +93,7 @@
                 </div>
             </div>
             <div class="col-lg-6 d-flex align-items-stretch">
+<<<<<<< HEAD
                 <div class="img d-flex align-items-center justify-content-center py-5" style="background-image: url(assets/index/images/victory.jpg); width: 100%;">
                 <p class="text-center mb-0 py-5">
                     <a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
@@ -101,6 +102,16 @@
                     <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
                 </p>
                 </div>
+=======
+                <img class="img d-flex align-items-center justify-content-center py-5" style="width: 100%;" src="<?= base_url('assets/index/images/victory.jpg'); ?>" alt="">
+                <p class="text-center mb-0 py-5">
+                    <a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
+                        <span class="ion-ios-play"></span>
+                    </a>
+                    <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
+                </p>
+                </img>
+>>>>>>> 091f29bea442bd76799460a32195a55912baa690
             </div>
         </div>
     </div>
@@ -250,7 +261,11 @@
                 <div class="carousel-team owl-carousel">
                     <div class="item">
                         <div class="team-wrap text-center">
+<<<<<<< HEAD
                             <div class="img"><img class="img" src="<?= base_url('assets/index/images/staff-1.jpg'); ?>" alt=""></div>
+=======
+                            <img class="img" src="<?= base_url('assets/index/images/staff-1.jpg'); ?>" alt="">
+>>>>>>> 091f29bea442bd76799460a32195a55912baa690
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Wide Receiver</span>
@@ -259,7 +274,11 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
+<<<<<<< HEAD
                             <div class="img"><img class="img" src="<?= base_url('assets/index/images/staff-2.jpg'); ?>" alt=""></div>
+=======
+                            <img class="img" src="<?= base_url('assets/index/images/staff-2.jpg'); ?>" alt=""></img>
+>>>>>>> 091f29bea442bd76799460a32195a55912baa690
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Tight End</span>
@@ -268,7 +287,11 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
+<<<<<<< HEAD
                             <div class="img"><img class="img" src="<?= base_url('assets/index/images/staff-3.jpg'); ?>" alt=""></div>
+=======
+                            <img class="img" src="<?= base_url('assets/index/images/staff-3.jpg'); ?>" alt="">
+>>>>>>> 091f29bea442bd76799460a32195a55912baa690
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Defensive</span>
@@ -277,7 +300,11 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
+<<<<<<< HEAD
                             <div class="img"><img class="img" src="<?= base_url('assets/index/images/staff-4.jpg'); ?>" alt=""></div>
+=======
+                            <img class="img" src="<?= base_url('assets/index/images/staff-4.jpg'); ?>" alt="">
+>>>>>>> 091f29bea442bd76799460a32195a55912baa690
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Quarterback</span>
@@ -286,7 +313,11 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
+<<<<<<< HEAD
                             <div class="img"><img class="img" src="<?= base_url('assets/index/images/staff-5.jpg'); ?>" alt=""></div>
+=======
+                            <img class="img" src="<?= base_url('assets/index/images/staff-5.jpg'); ?>" alt="">
+>>>>>>> 091f29bea442bd76799460a32195a55912baa690
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Runing Back</span>
@@ -295,7 +326,11 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
+<<<<<<< HEAD
                             <div class="img"><img class="img" src="<?= base_url('assets/index/images/staff-6.jpg'); ?>" alt=""></div>
+=======
+                            <img class="img" src="<?= base_url('assets/index/images/staff-6.jpg'); ?>" alt="">
+>>>>>>> 091f29bea442bd76799460a32195a55912baa690
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Center</span>
@@ -304,7 +339,11 @@
                     </div>
                     <div class="item">
                         <div class="team-wrap text-center">
+<<<<<<< HEAD
                             <div class="img"><img class="img" src="<?= base_url('assets/index/images/staff-7.jpg'); ?>" alt="">
+=======
+                            <img class="img" src="<?= base_url('assets/index/images/staff-7.jpg'); ?>" alt="">
+>>>>>>> 091f29bea442bd76799460a32195a55912baa690
                             <div class="text">
                                 <h3 class="mb-0">David Scott</h3>
                                 <span class="position">Offensive Guard</span>
