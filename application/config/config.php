@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 /*coba
 */
-$config['base_url'] = 'http://localhost/AZFA/';
+$config['base_url'] = 'http://localhost/Azfa/';
 
 /*
 |--------------------------------------------------------------------------

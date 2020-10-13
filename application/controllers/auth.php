@@ -11,4 +11,11 @@ class auth extends CI_Controller
         $this->load->view('auth/index');
         $this->load->view('auth/template/footerIndex');
     }
+    public function about()
+    {
+        $data['title'] = 'Azfa';
+        $this->load->view('auth/template/headerIndex');
+        $this->load->view('auth/about');
+        $this->load->view('auth/template/footerIndex');
+    }
 }

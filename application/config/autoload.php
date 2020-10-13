@@ -92,11 +92,7 @@ $autoload['drivers'] = array();
 /*
 coba
 */
-<<<<<<< HEAD
-$autoload['helper'] = array('url','form');
-=======
 $autoload['helper'] = array('url', 'utility', 'html');
->>>>>>> 091f29bea442bd76799460a32195a55912baa690
 
 /*
 | -------------------------------------------------------------------
