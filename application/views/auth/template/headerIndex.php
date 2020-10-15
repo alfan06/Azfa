@@ -40,7 +40,7 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-          <li class="nav-item active"><a href="about.php" class="nav-link">About</a></li>
+          <li class="nav-item active"><a href="<?= base_url(); ?>auth/about" class="nav-link">About</a></li>
           <li class="nav-item active"><a href="games.html" class="nav-link">Tiket</a></li>
           <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
           <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
