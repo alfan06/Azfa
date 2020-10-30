@@ -1,3 +1,14 @@
+<?php
+    $uri = 'http://api.football-data.org/v2/competitions/2021/standings';
+    $reqPrefs['http']['method'] = 'GET';
+    $reqPrefs['http']['header'] = 'X-Auth-Token: 12dd0633a47645b98bf5db455c7ed2bc';
+    $stream_context = stream_context_create($reqPrefs);
+    $response = file_get_contents($uri, false, $stream_context);
+    // $matches = var_dump($response);
+    $json = json_decode($response, true);
+    
+    $standing = $json['standings'][0]['table'];
+?>
 <div class="hero-wrap js-fullheight" style="background-image: url('assets/index/images/bg1.jpg');" data-stellar-background-ratio="1">
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
@@ -189,6 +200,50 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-game-schedule ftco-no-pt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading text-center">Match Standings Premiere League</span>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>Match Played</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GF</th>
+                    <th>GA</th>
+                    <th>GD</th>
+                    <th>Points</th>
+                    <th>Form</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($standing as $value) : ?>
+                    <tr>
+                        <td><?php echo $value['position']; ?></td>
+                        <td><img src="<?= $value['team']['crestUrl'] ?>" alt="" style="width:50px;height:50px"><?php echo ' '.$value['team']['name']; ?></td>
+                        <td><?php echo $value['playedGames'] ?></td>
+                        <td><?php echo $value['won'] ?></td>
+                        <td><?php echo $value['draw'] ?></td>
+                        <td><?php echo $value['lost'] ?></td>
+                        <td><?php echo $value['goalsFor'] ?></td>
+                        <td><?php echo $value['goalsAgainst'] ?></td>
+                        <td><?php echo $value['goalDifference'] ?></td>
+                        <td><?php echo $value['points'] ?></td>
+                        <td><?php echo $value['form'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
 </section>
 

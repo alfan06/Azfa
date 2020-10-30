@@ -32,7 +32,7 @@
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Don't have an account?<a href="<?= base_url(); ?>auth/">Sign Up</a>
+					Don't have an account?<a href="<?= base_url(); ?>login/register">Sign Up</a>
 				</div>
 				<div class="d-flex justify-content-center">
 					<a href="#">Forgot your password?</a>

@@ -57,9 +57,9 @@ class login extends CI_Controller
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('template/header_login', $data);
+            $this->load->view('auth/template/header_login', $data);
             $this->load->view('register/index', $data);
-            $this->load->view('template/footer');
+            $this->load->view('auth/template/footer_login');
         } else {
             $this->register_model->register();
 
@@ -71,14 +71,6 @@ class login extends CI_Controller
     public function logout(){
         $this->session->sess_destroy();
         redirect('login','refresh');
-    }
-
-    public function auth()
-    {
-        $data['title'] = 'azfa';
-        $this->load->view('auth/template/headerIndex');
-        $this->load->view('auth/index');
-        $this->load->view('auth/template/footerIndex');
     }
 }
 
