@@ -25,7 +25,7 @@ class login extends CI_Controller
     public function proses_login()
     {
         $username = htmlspecialchars($this->input->post('uname1'));
-        $passowrd =md5(htmlspecialchars($this->input->post('pwd1')));
+        $passowrd = htmlspecialchars($this->input->post('pwd1'));
 
         $ceklogin = $this->login_model->login($username, $passowrd);
 
@@ -33,17 +33,20 @@ class login extends CI_Controller
             foreach ($ceklogin as $row);
             $this->session->set_userdata('user', $row->username);
             $this->session->set_userdata('level', $row->level);
+            $this->session->set_userdata('status', $row->status);
 
-            if ($this->session->userdata('level') == "user") {
-                redirect('user/index');
-            } elseif (
-                $this->session->userdata('level') == "admin"
-            ) {
+            if ($this->session->userdata('level') == "user" && $this->session->userdata('status') == "aktif") {
+                redirect('auth/index');
+            } 
+            if ($this->session->userdata('level') == "admin" && $this->session->userdata('status') == "aktif") {
                 redirect('admin/index');
+            }
+            else {
+                redirect('login/index', 'refresh');
             }
         } else {
             $data['pesan'] = "username dan password anda salah";
-            redirect('login/index','refresh');
+            redirect('login/index', 'refresh');
         }
     }
 
@@ -61,16 +64,17 @@ class login extends CI_Controller
             $this->load->view('register/index', $data);
             $this->load->view('auth/template/footer_login');
         } else {
-            $this->register_model->register();
+            $this->login_model->register();
 
-            $this->session->set_flashdata('flash-data', 'ditambahkan');
-            redirect('login', 'refresh');
+            // $this->session->set_flashdata('flash-data', 'ditambahkan');
+            redirect('login/index', 'refresh');
         }
     }
 
-    public function logout(){
+    public function logout()
+    {
         $this->session->sess_destroy();
-        redirect('login','refresh');
+        redirect('login', 'refresh');
     }
 }
 

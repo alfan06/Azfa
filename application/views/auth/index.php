@@ -1,13 +1,17 @@
 <?php
-    $uri = 'http://api.football-data.org/v2/competitions/2021/standings';
-    $reqPrefs['http']['method'] = 'GET';
-    $reqPrefs['http']['header'] = 'X-Auth-Token: 12dd0633a47645b98bf5db455c7ed2bc';
-    $stream_context = stream_context_create($reqPrefs);
-    $response = file_get_contents($uri, false, $stream_context);
-    // $matches = var_dump($response);
-    $json = json_decode($response, true);
-    
-    $standing = $json['standings'][0]['table'];
+$uri = 'http://api.football-data.org/v2/competitions/2021/standings';
+$uri2 = 'http://api.football-data.org/v2/teams/66';
+$reqPrefs['http']['method'] = 'GET';
+$reqPrefs['http']['header'] = 'X-Auth-Token: 12dd0633a47645b98bf5db455c7ed2bc';
+$stream_context = stream_context_create($reqPrefs);
+$response = file_get_contents($uri, false, $stream_context);
+$response2 = file_get_contents($uri2, false, $stream_context);
+// $matches = var_dump($response);
+$json = json_decode($response, true);
+$json2 = json_decode($response2, true);
+
+$standing = $json['standings'][0]['table'];
+$teams = $json2['squad'];
 ?>
 <div class="hero-wrap js-fullheight" style="background-image: url('assets/index/images/bg1.jpg');" data-stellar-background-ratio="1">
     <div class="container">
@@ -92,36 +96,36 @@
                         </div>
                         <div class="sport-team d-flex align-items-center">
                             <div class="img logo order-sm-last" style="background-image: url('assets/index/images/team-2.jpg');">
-                            <div class="text-center px-1 px-md-3 desc">
-                                <h3 class="score lost"><span>1</span></h3>
-                                <h4 class="team-name">Mighty Falcons</h4>
+                                <div class="text-center px-1 px-md-3 desc">
+                                    <h3 class="score lost"><span>1</span></h3>
+                                    <h4 class="team-name">Mighty Falcons</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center">
-                        <p><a href="#" class="btn btn-primary">More Details</a></p>
+                        <div class="text-center">
+                            <p><a href="#" class="btn btn-primary">More Details</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 d-flex align-items-stretch">
-                <img class="img d-flex align-items-center justify-content-center py-5" style="width: 100%;" src="<?= base_url('assets/index/images/victory.jpg'); ?>" alt="">
-                <p class="text-center mb-0 py-5">
-                    <a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
-                        <span class="ion-ios-play"></span>
-                    </a>
-                    <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
-                </p>
-                </img>
+                <div class="col-lg-6 d-flex align-items-stretch">
+                    <img class="img d-flex align-items-center justify-content-center py-5" style="width: 100%;" src="<?= base_url('assets/index/images/victory.jpg'); ?>" alt="">
+                    <p class="text-center mb-0 py-5">
+                        <a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
+                            <span class="ion-ios-play"></span>
+                        </a>
+                        <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
+                    </p>
+                    </img>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 <section class="ftco-section ftco-game-schedule ftco-no-pt">
     <div class="container">
         <div class="row">
             <div class="col-md-12 heading-section ftco-animate mb-4">
-                <span class="subheading">Game Schedule</span>
+                <span class="subheading text-center">Game Schedule</span>
             </div>
         </div>
         <div class="row ftco-animate">
@@ -230,7 +234,7 @@
                 <?php foreach ($standing as $value) : ?>
                     <tr>
                         <td><?php echo $value['position']; ?></td>
-                        <td><img src="<?= $value['team']['crestUrl'] ?>" alt="" style="width:50px;height:50px"><?php echo ' '.$value['team']['name']; ?></td>
+                        <td><img src="<?= $value['team']['crestUrl'] ?>" alt="" style="width:50px;height:50px"><?php echo ' ' . $value['team']['name']; ?></td>
                         <td><?php echo $value['playedGames'] ?></td>
                         <td><?php echo $value['won'] ?></td>
                         <td><?php echo $value['draw'] ?></td>
@@ -240,6 +244,38 @@
                         <td><?php echo $value['goalDifference'] ?></td>
                         <td><?php echo $value['points'] ?></td>
                         <td><?php echo $value['form'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="ftco-section ftco-game-schedule ftco-no-pt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading text-center">Player List</span>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Date of Birth</th>
+                    <th>Country of Birth</th>
+                    <th>Nationality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($teams as $value) : ?>
+                    <tr>
+                        <td><?php echo $value['name'] ?></td>
+                        <td><?php echo $value['position'] ?></td>
+                        <td><?php echo $value['dateOfBirth'] ?></td>
+                        <td><?php echo $value['countryOfBirth'] ?></td>
+                        <td><?php echo $value['nationality'] ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

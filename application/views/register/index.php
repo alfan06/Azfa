@@ -1,25 +1,22 @@
-<?=
-    form_open('login/proses_login');
-?>
 <div class="container py-5">
     <div class="d-flex justify-content-center h-100 py-5 mt-5">
-        <div class="card">
+        <div class="card2">
             <div class="card-header center">
-                <h3 class="text-center">Sign In</h3>
+                <h3 class="text-center">Register</h3>
             </div>
             <div class="card-body">
-                <form role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                <form method="POST" action="">
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Nama" name="namee" id="name" required>
+                        <input type="text" class="form-control" placeholder="Nama" name="nama" id="nama" required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="username" name="uname1" id="uname1" required>
+                        <input type="text" class="form-control" placeholder="username" name="username" id="username" required>
                     </div>
                     <div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -31,10 +28,10 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="password" name="pwd1" id="pwd1" required>
+                        <input type="password" class="form-control" placeholder="password" name="password" id="password" required>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" value="Register" class="btn login_btn btn-block">
+                    <div class="form-group text-center">
+                        <button type="submit" name="submit" class="btn login_btn btn-block">Register</button>
                     </div>
                 </form>
             </div>
@@ -49,6 +46,3 @@
         </div>
     </div>
 </div>
-<?=
-    form_close();
-?>
