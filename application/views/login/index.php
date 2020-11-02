@@ -1,6 +1,22 @@
 <?=
     form_open('login/proses_login');
 ?>
+<script>
+        function passwordShowUnshow() {
+            var x = document.getElementById("pwd1");
+            var y = document.getElementById("passwordConf");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+            if (y.type === "password") {
+                y.type = "text";
+            } else {
+                y.type = "password";
+            }
+        }
+</script>
 <div class="container py-5">
 	<div class="d-flex justify-content-center h-100 py-5 mt-5">
 		<div class="card">
@@ -22,7 +38,7 @@
                         <input type="password" class="form-control" placeholder="password" name="pwd1" id="pwd1" required>
 					</div>
 					<div class="row align-items-center remember">
-						<input type="checkbox">Remember Me
+						<input type="checkbox" onclick="passwordShowUnshow()" id="checkbox">Show password
                     </div>
                     <br>
 					<div class="form-group">

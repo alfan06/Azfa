@@ -44,7 +44,7 @@
           <li class="nav-item active"><a href="games.html" class="nav-link">Tiket</a></li>
           <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
           <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item cta primary"><a href="#" class="nav-link">Buy Ticket</a></li>
+          <li class="nav-item cta primary"><a href="<?= base_url(); ?>login/index" class="nav-link">Login</a></li>
 
         </ul>
       </div>

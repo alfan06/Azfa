@@ -1,3 +1,19 @@
+<script>
+        function passwordShowUnshow() {
+            var x = document.getElementById("password");
+            var y = document.getElementById("passwordConf");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+            if (y.type === "password") {
+                y.type = "text";
+            } else {
+                y.type = "password";
+            }
+        }
+</script>
 <div class="container py-5">
     <div class="d-flex justify-content-center h-100 py-5 mt-5">
         <div class="card2">
@@ -30,6 +46,9 @@
                         </div>
                         <input type="password" class="form-control" placeholder="password" name="password" id="password" required>
                     </div>
+                    <div class="row align-items-center remember">
+						<input type="checkbox" onclick="passwordShowUnshow()" id="checkbox">Show password
+                    </div>
                     <div class="form-group text-center">
                         <button type="submit" name="submit" class="btn login_btn btn-block">Register</button>
                     </div>
@@ -38,9 +57,6 @@
             <div class="card-footer">
                 <div class="d-flex justify-content-center links">
                     Already Have an Account<a href="<?= base_url(); ?>login">Sign In</a>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <a href="#">Forgot your password?</a>
                 </div>
             </div>
         </div>
