@@ -6,9 +6,9 @@ class admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->helper('url');
-        $this->load->helper('form');
-        $this->load->model('admin_model');
+        // $this->load->helper('url');
+        // $this->load->helper('form');
+        // $this->load->model('admin_model');
 
         if ($this->session->userdata('level') == "user") {
             redirect('user', 'refresh');
@@ -30,5 +30,11 @@ class admin extends CI_Controller
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/index');
         $this->load->view('admin/template/footer');
+    }
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('auth', 'refresh');
     }
 }

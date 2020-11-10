@@ -30,4 +30,25 @@ class auth extends CI_Controller
         $this->load->view('auth/about');
         $this->load->view('auth/template/footerIndex');
     }
+
+    public function contact()
+    {
+        $data['title'] = 'Azfa';
+
+        $this->form_validation->set_rules('full_name', 'Nama', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required');
+        $this->form_validation->set_rules('phone', 'Phone', 'trim|required');
+        $this->form_validation->set_rules('message', 'Message', 'trim|required');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('auth/template/headerIndex', $data);
+            $this->load->view('auth/contact', $data);
+            $this->load->view('auth/template/footerIndex');
+        } else {
+            $this->contact_model->contact();
+
+            $this->session->set_flashdata('flash-data', 'Succesfully');
+            redirect('auth/contact', 'refresh');
+        }
+    }
 }
