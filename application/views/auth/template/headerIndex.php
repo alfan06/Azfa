@@ -5,6 +5,11 @@
   <title>AzfaTiket</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhQgSeUQM0IbankSjDAlV0sb9QdKVapuA&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    
 
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
 
@@ -27,6 +32,21 @@
   <link rel="stylesheet" href="<?= base_url('assets/index/css/flaticon.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/index/css/icomoon.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/index/css/style.css') ?>">
+  <script>
+    // fungsi initialize untuk mempersiapkan peta
+    function initMap() {
+        const myLatLng = { lat: -7.9825833, lng: 112.6303961 };
+        const map = new google.maps.Map(document.getElementById("googleMap"), {
+          zoom: 15,
+          center: myLatLng,
+        });
+        new google.maps.Marker({
+          position: myLatLng,
+          map,
+          title: "Azfa Tiket",
+        });
+      }
+  </script>
 </head>
 
 <body>
