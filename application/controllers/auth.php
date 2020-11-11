@@ -51,4 +51,9 @@ class auth extends CI_Controller
             redirect('auth/contact', 'refresh');
         }
     }
+
+    public function kosong()
+    {
+        $this->load->view('auth/kosong');
+    }
 }

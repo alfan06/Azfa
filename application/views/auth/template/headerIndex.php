@@ -31,7 +31,7 @@
 
   <link rel="stylesheet" href="<?= base_url('assets/index/css/flaticon.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/index/css/icomoon.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('assets/index/css/style.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/index/css/bootstrap.css') ?>">
   <script>
     // fungsi initialize untuk mempersiapkan peta
     function initMap() {
@@ -52,14 +52,14 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-        <a class="navbar-brand" href="index.php"><span>AzfaTiket</span></a>
+        <a class="navbar-brand" href="<?= base_url(); ?>auth"><span>AzfaTiket</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="<?= base_url(); ?>auth" class="nav-link">Home</a></li>
             <li class="nav-item active"><a href="<?= base_url(); ?>auth/about" class="nav-link">About</a></li>
             <li class="nav-item active"><a href="games.html" class="nav-link">Tiket</a></li>
             <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>

@@ -8326,7 +8326,7 @@ h1, h2, h3, h4, h5,
   .btn.btn-primary {
     background: #c70101 !important;
     border: 1px solid #c70101 !important;
-    color: ##ffffff!important; }
+    color: #ffffff!important; }
     .btn.btn-primary:hover {
       border: 1px solid #000000 !important;
       background: #000000 !important;
@@ -8493,7 +8493,7 @@ h1, h2, h3, h4, h5,
       font-weight: 800;
       font-size: 50px; }
       .scoreboard .sport-team .score.win span {
-        border-bottom: 5px solid #ffb400; }
+        border-bottom: 5px solid #c70101; }
       .scoreboard .sport-team .score.lost span {
         color: rgba(0, 0, 0, 0.2); }
     .scoreboard .sport-team .team-name {
@@ -8569,7 +8569,7 @@ h1, h2, h3, h4, h5,
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.1); }
       .ftco-game-schedule .owl-dots .owl-dot.active {
-        background: #ffb400; }
+        background: #c70101; }
 
 .game-schedule .sport-team {
   display: block;
@@ -8602,10 +8602,10 @@ h1, h2, h3, h4, h5,
     color: black; }
 
 .table thead tr {
-  background: #ffb400; }
+  background: #c70101; }
 
 .table thead th {
-  color: #000000;
+  color: #ffffff;
   border: none; }
 
 .table tbody {
@@ -8698,7 +8698,7 @@ h1, h2, h3, h4, h5,
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.1); }
       .ftco-team .owl-dots .owl-dot.active {
-        background: #ffb400; }
+        background: #c70101; }
 
 .team-wrap .img {
   width: 120px;
@@ -8888,8 +8888,8 @@ textarea.form-control {
       /* Firefox 18- */
       color: rgba(0, 0, 0, 0.7) !important; }
   .subscribe-form .form-group .submit {
-    color: #000000 !important;
-    background: #ffb400 !important;
+    color: #ffffff !important;
+    background: #c70101 !important;
     border-radius: 0px 5px 5px 0px;
     font-size: 16px; }
     .subscribe-form .form-group .submit:hover {
@@ -8949,7 +8949,7 @@ textarea.form-control {
     display: block;
     float: left;
     background: rgba(255, 255, 255, 0.1);
-    background: #ffb400;
+    background: #c70101;
     border-radius: 50%;
     position: relative; }
     .ftco-footer-social li a span {
@@ -8960,7 +8960,7 @@ textarea.form-control {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      color: #000000 !important; }
+      color: #ffffff !important; }
     .ftco-footer-social li a:hover {
       color: #fff; }
 
@@ -9060,7 +9060,7 @@ textarea.form-control {
   font-size: 40px;
   color: #fff; }
   .heading-section.heading-section-white h2 span {
-    color: #ffb400; }
+    color: #c70101; }
 
 .heading-section.heading-section-white p {
   color: rgba(255, 255, 255, 0.9); }
@@ -9150,7 +9150,7 @@ textarea.form-control {
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.1); }
       .testimony-section .owl-dots .owl-dot.active {
-        background: #ffb400; }
+        background: #c70101; }
 
 .testimony-wrap {
   display: block;
@@ -9175,7 +9175,7 @@ textarea.form-control {
       -ms-border-radius: 50%;
       border-radius: 50%; }
       .testimony-wrap .user-img .quote i {
-        color: #ffb400; }
+        color: #c70101; }
   .testimony-wrap p {
     font-size: 20px; }
   .testimony-wrap .name {
