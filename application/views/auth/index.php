@@ -1,6 +1,8 @@
 <?php
 $uri = 'http://api.football-data.org/v2/competitions/2021/standings';
 $uri2 = 'http://api.football-data.org/v2/teams/66';
+
+$uri4 = 'https://api.football-data.org/v2/teams/66/matches?status=SCHEDULED';
 $opts = array(
     'http' => array(
         'method' => "GET",
@@ -12,12 +14,15 @@ $opts = array(
 $stream_context = stream_context_create($opts);
 $response = file_get_contents($uri, false, $stream_context);
 $response2 = file_get_contents($uri2, false, $stream_context);
+$response4 = file_get_contents($uri4, false, $stream_context);
 // $matches = var_dump($response);
 $json = json_decode($response, true);
 $json2 = json_decode($response2, true);
+$json4 = json_decode($response4, true);
 
 $standing = $json['standings'][0]['table'];
 $teams = $json2['squad'];
+$match = $json4['matches'];
 
 // $image = array('assets/index/images/GGMU/Aaron_Wan-Bissaka.png', 'assets/index/images/GGMU/Alex_Telles.png');
 $array = array(
@@ -61,14 +66,14 @@ $i = 0;
 <div class="hero-wrap js-fullheight" style="background-image: url('assets/index/images/aa.jpg');" data-stellar-background-ratio="1">
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-        <div class="col-md-7 ftco-animate mt-5" data-scrollax=" properties: { translateY: '70%' }">
-        <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Welcome to Azfa Tickets</h1>
-        <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">You can buy Manchester United Tickets.</p>
+            <div class="col-md-7 ftco-animate mt-5" data-scrollax=" properties: { translateY: '70%' }">
+                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Welcome to Azfa Tickets</h1>
+                <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">You can buy Manchester United Tickets.</p>
                 <p class="d-flex align-items-center">
                     <a href="https://www.youtube.com/watch?v=7UY1DJTWr2k" class="icon-video popup-vimeo d-flex justify-content-center align-items-center mr-3">
                         <span class="ion-ios-play"></span>
                     </a>
-                    
+
                     <span class="watch">Watch Games</span>
                 </p>
             </div>
@@ -176,78 +181,20 @@ $i = 0;
         </div>
         <div class="row ftco-animate">
             <div class="col-md-12 carousel-game-schedule owl-carousel">
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <img class="img logo" src="<?= base_url('assets/index/images/team-1.jpg'); ?>" alt="">
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
+                <?php foreach ($match as $value) :?>
+                    <div class="item">
+                        <div class="game-schedule">
+                            <div class="sport-team d-flex align-items-center">
+                                <img class="img logo" src="<?= base_url('assets/index/images/team-1.jpg'); ?>" alt="">
+                                <div class="pl-4 desc">
+                                    <span class="venue"><?php echo $value['competition']['name']; ?></span>
+                                    <h4 class="team-name"><?php echo $value['homeTeam']['name']; ?> <br> <?php echo $value['awayTeam']['name']; ?></h4>
+                                    <span class="date"><?php echo date("Y-m-d H:i", strtotime($value['utcDate'])); ?></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: <?= base_url('assets/index/images/team-2.jpg') ?>;"></div>
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <img class="img logo" src="<?= base_url('assets/index/images/team-3.jpg'); ?>" alt="">
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <img class="img logo" src="<?= base_url('assets/index/images/team-4.jpg'); ?>" alt="">
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <img class="img logo" style="<?= base_url('assets/index/images/team-5.jpg'); ?>">
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="game-schedule">
-                        <div class="sport-team d-flex align-items-center">
-                            <img class="img logo" src="<?= base_url('assets/index/images/team-6.jpg'); ?>" alt="">
-                            <div class="pl-4 desc">
-                                <span class="venue">Home @ Arena</span>
-                                <h4 class="team-name">Knight Warrior</h4>
-                                <span class="date">April 17, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -363,7 +310,8 @@ $i = 0;
                                 </div>
                             </div>
                         </div>
-                    <?php $i++; endforeach; ?>
+                    <?php $i++;
+                    endforeach; ?>
                 </div>
             </div>
         </div>

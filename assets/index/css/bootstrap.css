@@ -8593,7 +8593,7 @@ h1, h2, h3, h4, h5,
   .game-schedule .sport-team .desc {
     width: calc(100% - 100px); }
   .game-schedule .sport-team .team-name {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 900;
     margin-bottom: 0; }
   .game-schedule .sport-team .venue {
