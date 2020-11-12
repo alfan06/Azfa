@@ -61,7 +61,6 @@ $array = array(
     32 => 'assets/index/images/GGMU/Facundo Pellistri.png',
     33 => 'assets/index/images/GGMU/OLE.png'
 );
-$i = 0;
 ?>
 <div class="hero-wrap js-fullheight" style="background-image: url('assets/index/images/aa.jpg');" data-stellar-background-ratio="1">
     <div class="container">
@@ -87,39 +86,45 @@ $i = 0;
             <div class="col-md-12">
                 <div class="game-wrap-1 ftco-animate p-4">
                     <div class="row p-2">
-                        <div class="col-md-6 pb-4 pb-lg-0 col-lg-3">
+                        <div class="pb-4 pb-lg-0 col-md-4">
                             <div class="text d-flex">
                                 <div class="team-logo d-flex">
-                                    <img class="img" src="<?= base_url('assets/index/images/team-1.jpg'); ?>" alt="">
-                                    <img class="img img-2" src="<?= base_url('assets/index/images/team-2.jpg'); ?>" alt="">
+                                    <img class="img" src="<?= base_url('assets/index/images/premierLeague.png'); ?>" alt="">
                                 </div>
-                                <div class="team-name pl-3">
-                                    <h3><span>Pusamania</span> <span>Barito FC</span></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pb-4 pb-lg-0 col-lg-3">
-                            <div class="text">
-                                <div class="img"></div>
-                                <h3 class="league">Shopee Liga 1</h3>
-                                <span>Semi-Final</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pb-4 pb-lg-0 col-lg-4">
-                            <div class="text">
-                                <div id="timer" class="d-flex mb-0">
-                                    <div class="time" id="days"></div>
-                                    <div class="time pl-3" id="hours"></div>
-                                    <div class="time pl-3" id="minutes"></div>
-                                    <div class="time pl-3" id="seconds"></div>
+                                <div class="team-name pl-3 mt-2">
+                                    <?php $i = 0;
+                                    foreach ($match as $value) :
+                                        if ($i == 1) {
+                                            break;
+                                        } else { ?>
+                                            <h3><span><?php echo $value['homeTeam']['name'] ?></span> <span><?php echo $value['awayTeam']['name'] ?></span></h3>
+                                        <?php } ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 pb-4 pb-lg-0 col-lg-2">
+                        <div class="pb-4 pb-lg-0 col-md-2 mt-2">
                             <div class="text">
-                                <p class="mb-0"><a href="#" class="btn btn-primary py-3">Buy Tickets</a></p>
+                                <h3 class="league"><?php echo $value['competition']['name']; ?></h3>
+                                <span>Matchday : <?php echo $value['matchday']; ?></span>
                             </div>
                         </div>
+                    <?php $i++;
+                                    endforeach; ?>
+                    <div class="col-md-6 pb-4 pb-lg-0 col-lg-4 mt-2">
+                        <div class="text">
+                            <div id="timer" class="d-flex mb-0">
+                                <div class="time" id="days"></div>
+                                <div class="time pl-3" id="hours"></div>
+                                <div class="time pl-3" id="minutes"></div>
+                                <div class="time pl-3" id="seconds"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pb-4 pb-lg-0 col-lg-2 mt-2">
+                        <div class="text">
+                            <p class="mb-0"><a href="#" class="btn btn-primary py-3">Buy Tickets</a></p>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -146,30 +151,31 @@ $i = 0;
                             </div>
                         </div>
                         <div class="sport-team d-flex align-items-center">
-                            <div class="img logo order-sm-last" style="background-image: url('assets/index/images/team-2.jpg');">
-                                <div class="text-center px-1 px-md-3 desc">
-                                    <h3 class="score lost"><span>1</span></h3>
-                                    <h4 class="team-name">Mighty Falcons</h4>
-                                </div>
+                            <div class="img logo order-sm-last" style="background-image: url('assets/index/images/team-2.jpg');"></div>
+                            <div class="text-center px-1 px-md-3 desc">
+                                <h3 class="score lost"><span>1</span></h3>
+                                <h4 class="team-name">Mighty Falcons</h4>
                             </div>
                         </div>
-                        <div class="text-center">
-                            <p><a href="#" class="btn btn-primary">More Details</a></p>
-                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p><a href="#" class="btn btn-primary">More Details</a></p>
                     </div>
                 </div>
-                <div class="col-lg-6 d-flex align-items-stretch">
-                    <img class="img d-flex align-items-center justify-content-center py-5" style="width: 100%;" src="<?= base_url('assets/index/images/victory.jpg'); ?>" alt="">
+            </div>
+            <div class="col-lg-6 d-flex align-items-stretch">
+                <div class="img d-flex align-items-center justify-content-center py-5" style="background-image: url('assets/indeximages/victory.jpg'); width: 100%;">
                     <p class="text-center mb-0 py-5">
                         <a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
                             <span class="ion-ios-play"></span>
                         </a>
                         <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
                     </p>
-                    </img>
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 <section class="ftco-section ftco-game-schedule ftco-no-pt">
@@ -181,15 +187,20 @@ $i = 0;
         </div>
         <div class="row ftco-animate">
             <div class="col-md-12 carousel-game-schedule owl-carousel">
-                <?php foreach ($match as $value) :?>
+                <?php foreach ($match as $value) : ?>
                     <div class="item">
                         <div class="game-schedule">
                             <div class="sport-team d-flex align-items-center">
-                                <img class="img logo" src="<?= base_url('assets/index/images/team-1.jpg'); ?>" alt="">
+                                <?php if ($value['competition']['name'] == 'UEFA Champions League') { ?>
+                                    <img class="img logo" src="<?= base_url('assets/index/images/UEFA_ChampionsLeague.png') ?>" alt="">
+                                <?php } else { ?>
+                                    <img class="img logo" src="<?= base_url('assets/index/images/PremierLeague.png'); ?>" alt="">
+                                <?php } ?>
                                 <div class="pl-4 desc">
                                     <span class="venue"><?php echo $value['competition']['name']; ?></span>
                                     <h4 class="team-name"><?php echo $value['homeTeam']['name']; ?> <br> <?php echo $value['awayTeam']['name']; ?></h4>
                                     <span class="date"><?php echo date("Y-m-d H:i", strtotime($value['utcDate'])); ?></span>
+                                    <span class="date">Matchday : <?php echo $value['matchday']; ?></span>
                                 </div>
                             </div>
                         </div>
@@ -300,7 +311,7 @@ $i = 0;
         <div class="row">
             <div class="col-md-12 ftco-animate">
                 <div class="carousel-team owl-carousel">
-                    <?php foreach ($teams as $value) : ?>
+                    <?php $i=0; foreach ($teams as $value) : ?>
                         <div class="item">
                             <div class="team-wrap text-center">
                                 <div class="img"><img class="img" src="<?= base_url($array[$i]); ?>" alt=""></div>
@@ -451,91 +462,6 @@ $i = 0;
                                 <span class="position">Viewer</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Blog</span>
-                <h2>Recent News</h2>
-            </div>
-        </div>
-        <div class="row d-flex">
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_1.jpg');">
-                    </a>
-                    <div class="text mt-3 float-right d-block">
-                        <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-                            <div class="one">
-                                <span class="day mr-1">08</span>
-                            </div>
-                            <div class="two">
-                                <span class="yr">2019</span>
-                                <span class="mos">March</span>
-                            </div>
-                        </div>
-                        <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_2.jpg');">
-                    </a>
-                    <div class="text mt-3 float-right d-block">
-                        <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-                            <div class="one">
-                                <span class="day mr-1">07</span>
-                            </div>
-                            <div class="two">
-                                <span class="yr">2019</span>
-                                <span class="mos">March</span>
-                            </div>
-                        </div>
-                        <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_3.jpg');">
-                    </a>
-                    <div class="text mt-3 float-right d-block">
-                        <div class="d-flex align-items-center p-2 mb-4 topp">
-                            <div class="one">
-                                <span class="day mr-1">07</span>
-                            </div>
-                            <div class="two">
-                                <span class="yr">2019</span>
-                                <span class="mos">March</span>
-                            </div>
-                        </div>
-                        <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_4.jpg');">
-                    </a>
-                    <div class="text mt-3 float-right d-block">
-                        <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-                            <div class="one">
-                                <span class="day mr-1">06</span>
-                            </div>
-                            <div class="two">
-                                <span class="yr">2019</span>
-                                <span class="mos">March</span>
-                            </div>
-                        </div>
-                        <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
                     </div>
                 </div>
             </div>

@@ -15,19 +15,11 @@ body {
 }
 
 .card {
-	height: 380px;
+	height: 100%;
 	margin-top: auto;
 	margin-bottom: auto;
 	width: 400px;
-	background: linear-gradient(90deg, #993090 20%, #982F8F 20%, #662B81 80%) 
-}
-
-.card2 {
-	height: 450px;
-	margin-top: auto;
-	margin-bottom: auto;
-	width: 400px;
-	background: linear-gradient(90deg, #993090 20%, #982F8F 20%, #662B81 80%) 
+	background: linear-gradient(90deg, #ED213A, #93291E); 
 }
 
 .social_icon span {

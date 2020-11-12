@@ -8436,22 +8436,19 @@ h1, h2, h3, h4, h5,
       color: rgba(255, 255, 255, 0.8); }
     .game-wrap-1 .text .btn {
       display: block; }
-  .game-wrap-1 .team-logo {
-    width: 90px;
-    position: relative; }
+  /* .game-wrap-1 .team-logo {
+    width: 150px;
+    position: relative; } */
     .game-wrap-1 .team-logo .img {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
-      width: 60px;
-      height: 60px;
+      width: 75px;
+      height: 75px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       border-radius: 50%; }
-      .game-wrap-1 .team-logo .img.img-2 {
-        left: 35px;
-        z-index: -1; }
   .game-wrap-1 .team-name {
     width: calc(100% - 90px); }
 

@@ -18,7 +18,7 @@ $response2 = file_get_contents($uri2, false, $stream_context);
 $response3 = file_get_contents($uri3, false, $stream_context);
 $response4 = file_get_contents($uri4, false, $stream_context);
 
-$matches = var_dump($response);
+var_dump($response4);
 // $matches = var_dump($response);
 $json = json_decode($response, true);
 $json2 = json_decode($response2, true);

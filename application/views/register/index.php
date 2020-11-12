@@ -16,7 +16,7 @@
 </script>
 <div class="container py-5">
     <div class="d-flex justify-content-center h-100 py-5 mt-5">
-        <div class="card2">
+        <div class="card">
             <div class="card-header center">
                 <h3 class="text-center">Register</h3>
             </div>
@@ -30,13 +30,13 @@
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <span class="input-group-text"><i class="fas fa-users"></i></span>
                         </div>
                         <input type="text" class="form-control" placeholder="username" name="username" id="username" required>
                     </div>
                     <div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class="fas fa-envelope"></i></span>
 						</div>
                         <input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
                     </div>
