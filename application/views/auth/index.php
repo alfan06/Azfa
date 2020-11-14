@@ -328,59 +328,6 @@ $array = array(
         </div>
 </section>
 
-<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-    <div class="container">
-        <div class="row d-flex">
-            <div class="col-md-6 d-flex">
-                <img class="img d-flex align-self-stretch" src="<?= base_url('assets/index/images/about.jpg'); ?>" alt="">
-            </div>
-            <div class="col-md-6 pl-lg-5 py-5">
-                <div class="row justify-content-start pb-3">
-                    <div class="col-md-12 heading-section ftco-animate">
-                        <h2 class="mb-4">About the Knights Team</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
-                        <div class="block-18 text-center py-3 bg-light mb-4">
-                            <div class="text">
-                                <strong class="number" data-number="100">0</strong>
-                                <span>Game Played</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
-                        <div class="block-18 text-center py-3 bg-light mb-4">
-                            <div class="text">
-                                <strong class="number" data-number="10">0</strong>
-                                <span>Coaches</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
-                        <div class="block-18 text-center py-3 bg-light mb-4">
-                            <div class="text">
-                                <strong class="number" data-number="20">0</strong>
-                                <span>Trophies</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
-                        <div class="block-18 text-center py-3 bg-light mb-4">
-                            <div class="text">
-                                <strong class="number" data-number="80">0</strong>
-                                <span>Members</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 <section class="ftco-section testimony-section" style="background-image: url('assets/index/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -469,7 +416,7 @@ $array = array(
     </div>
 </section>
 
-<section class="ftco-subscribe img" style="background-image: url('assets/index/images/bg_1.jpg');">
+<section class="ftco-subscribe img" style="background-image: url('assets/index/images/aa.jpg');">
     <div class="overlay">
         <div class="container">
             <div class="row d-flex justify-content-center">

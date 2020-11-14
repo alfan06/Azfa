@@ -61,7 +61,8 @@
         <div class="row d-flex">
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_1.jpg');">
+                    <a href="#">
+                        <img src="<?= base_url('assets/index/images/GGMU/Jesse Lingard.png'); ?>" class="block-20" alt="">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -69,8 +70,8 @@
                                 <span class="day mr-1">08</span>
                             </div>
                             <div class="two">
-                                <span class="yr">2019</span>
-                                <span class="mos">March</span>
+                                <span class="yr">2020</span>
+                                <span class="mos">November</span>
                             </div>
                         </div>
                         <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
@@ -79,7 +80,8 @@
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_2.jpg');">
+                    <a href="#">
+                        <img src="<?= base_url('assets/index/images/GGMU/OLE.png'); ?>" class="block-20" alt="">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -87,8 +89,8 @@
                                 <span class="day mr-1">07</span>
                             </div>
                             <div class="two">
-                                <span class="yr">2019</span>
-                                <span class="mos">March</span>
+                                <span class="yr">2020</span>
+                                <span class="mos">November</span>
                             </div>
                         </div>
                         <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
@@ -97,7 +99,8 @@
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_3.jpg');">
+                    <a href="#">
+                        <img src="<?= base_url('assets/index/images/GGMU/Paul  Pogba.png'); ?>" class="block-20" alt="">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 mb-4 topp">
@@ -105,8 +108,8 @@
                                 <span class="day mr-1">07</span>
                             </div>
                             <div class="two">
-                                <span class="yr">2019</span>
-                                <span class="mos">March</span>
+                                <span class="yr">2020</span>
+                                <span class="mos">November</span>
                             </div>
                         </div>
                         <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
@@ -115,7 +118,8 @@
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('assets/index/images/image_4.jpg');">
+                    <a href="#">
+                        <img src="<?= base_url('assets/index/images/GGMU/David de Gea.png'); ?>" class="block-20" alt="">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
@@ -123,8 +127,8 @@
                                 <span class="day mr-1">06</span>
                             </div>
                             <div class="two">
-                                <span class="yr">2019</span>
-                                <span class="mos">March</span>
+                                <span class="yr">2020</span>
+                                <span class="mos">November</span>
                             </div>
                         </div>
                         <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>

@@ -56,4 +56,16 @@ class auth extends CI_Controller
     {
         $this->load->view('auth/kosong');
     }
+
+    public function tiket()
+    {
+        if ($this->session->userdata('level') == "user" and $this->session->userdata('status') == "Aktif") {
+            $data['title'] = "Purchasing a Ticket";
+            $this->load->view('auth/template/headerIndex', $data);
+            $this->load->view('auth/tiket', $data);
+            $this->load->view('auth/template/footerIndex');
+        } else {
+            redirect('login', 'refresh');
+        }
+    }
 }

@@ -31,7 +31,7 @@ class login extends CI_Controller
             redirect('admin', 'refresh');
         } 
         $username = htmlspecialchars($this->input->post('uname1'));
-        $passowrd = htmlspecialchars(MD5($this->input->post('pwd1')));
+        $passowrd = htmlspecialchars(md5($this->input->post('pwd1')));
 
         $cekLogin = $this->login_model->login($username, $passowrd);
 
@@ -72,7 +72,7 @@ class login extends CI_Controller
             if ($this->session->userdata('level') == "admin") {
                 redirect('admin');
             }elseif ($this->session->userdata('level') == "user" and $this->session->userdata('status') == "Aktif"){
-                redirect('user');
+                redirect('auth');
             }elseif ($this->session->userdata('level') == "user" and $this->session->userdata('status') == "Tidak Aktif"){
                 $this->session->sess_destroy();
                 $data['pesan'] = "Sorry You Are Not Active, Please Contact Admin!!";
@@ -114,7 +114,7 @@ class login extends CI_Controller
     public function logout()
     {
         $this->session->sess_destroy();
-        redirect('login', 'refresh');
+        redirect('auth', 'refresh');
     }
 }
 
