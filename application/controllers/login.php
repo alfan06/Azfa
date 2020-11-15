@@ -27,7 +27,7 @@ class login extends CI_Controller
     {
         if ($this->session->userdata('level') == "user" and $this->session->userdata('status') == "Aktif") {
             redirect('user','refersh');
-        } elseif ($this->session->userdata('level') == "admin") {
+        } else if ($this->session->userdata('level') == "admin") {
             redirect('admin', 'refresh');
         } 
         $username = htmlspecialchars($this->input->post('uname1'));

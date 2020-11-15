@@ -69,7 +69,7 @@
             </form>
             <?php if ($this->session->flashdata('flash-data')) : ?>
                 <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                    Message Sended <?= $this->session->flashdata('flash-data'); ?>
+                    Ticket Buyed <?= $this->session->flashdata('flash-data'); ?>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
