@@ -48,8 +48,8 @@ class user extends CI_Controller
         $data['user'] = $this->user_model->getUserById($id);
         $this->load->view('admin/template/header', $data);
         $this->load->view('admin/template/sidebar', $data);
-        $this->load->view('user/detail', $data);
-        $this->load->view('admin/template/footerAdmin', $data);
+        $this->load->view('admin/detail', $data);
+        $this->load->view('admin/template/footer', $data);
     }
 
     public function edit($id)

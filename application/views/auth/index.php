@@ -333,8 +333,8 @@ $array = array(
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                <span class="subheading">Testimonial</span>
-                <h2 class="mb-4">Happy Viewers</h2>
+                <span class="subheading">Our Legend</span>
+                <h2 class="mb-4">Theater of Dream</h2>
             </div>
         </div>
         <div class="row ftco-animate justify-content-center">
@@ -342,33 +342,33 @@ $array = array(
                 <div class="carousel-testimony owl-carousel ftco-owl">
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image: url('assets/index/images/person_1.jpg');">
+                            <div class="user-img mb-4" style="background-image: url('assets/index/images/Sir-Alex.jpg');">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
                             </div>
                             <div class="text p-3">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Arthur Browner</p>
-                                <span class="position">Viewer</span>
+                                <p class="mb-4">"You can't always come in shouting and screaming. That doesn't work. No one likes to get criticised. But in the football dressing room, it's necessary that you point out your players' mistakes. I do it right after the game. I don't wait until Monday, i do it, and it's finished. I'm on to the next match. There is no point in criticising a player forever".</p>
+                                <p class="name">Sir Alex Ferguson</p>
+                                <span class="position">Ex-Coach</span>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image:url('assets/index/images/person_2.jpg')">
+                            <div class="user-img mb-4" style="background-image:url('assets/index/images/OLE.png')">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
                             </div>
                             <div class="text p-3">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Arthur Browner</p>
-                                <span class="position">Viewer</span>
+                                <p class="mb-4">Whatever competition you face, the only goal is to win</p>
+                                <p class="name">Ole Gunnar Solksjaer</p>
+                                <span class="position">Coach</span>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <!-- <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
                             <div class="user-img mb-4" style="background-image:url('assets/index/images/person_3.jpg')">
                                 <span class="quote d-flex align-items-center justify-content-center">
@@ -409,7 +409,7 @@ $array = array(
                                 <span class="position">Viewer</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
