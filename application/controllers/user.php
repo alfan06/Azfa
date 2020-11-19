@@ -69,8 +69,8 @@ class user extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('admin/template/header', $data);
             $this->load->view('admin/template/sidebar', $data);
-            $this->load->view('user/edit', $data);
-            $this->load->view('admin/template/footerAdmin', $data);
+            $this->load->view('admin/editUser', $data);
+            $this->load->view('admin/template/footer', $data);
         } else {
             $this->user_model->ubahDataUser();
             $this->session->set_flashdata('flash-data', 'Edited');
@@ -112,7 +112,7 @@ class user extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('admin/template/header', $data);
             $this->load->view('admin/template/sidebar');
-            $this->load->view('user/change_password', $data);
+            $this->load->view('admin/ganti_pwd', $data);
             $this->load->view('admin/template/footer');
         } else {
             $this->user_model->changePassword();
