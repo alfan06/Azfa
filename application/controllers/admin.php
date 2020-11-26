@@ -32,6 +32,15 @@ class admin extends CI_Controller
         $this->load->view('admin/template/footer');
     }
 
+    public function transaksi()
+    {
+        $data['title'] = 'Admin Detail Transaksi';
+        $this->load->view('admin/template/header');
+        $this->load->view('admin/template/sidebar');
+        $this->load->view('admin/detailPembayaran');
+        $this->load->view('admin/template/footer');
+    }
+
     public function logout()
     {
         $this->session->sess_destroy();

@@ -1,9 +1,14 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+use \Stripe\Stripe;
+use \Stripe\Customer;
+use \Stripe\Charge;
+use \Stripe\ApiOperations\Create;
+
 class auth extends CI_Controller
 {
-    
+
     public function __construct()
     {
         parent::__construct();
@@ -12,7 +17,6 @@ class auth extends CI_Controller
         $this->load->model('contact_model');
     }
     
-
     public function index()
     {
         $data['title'] = 'Azfa';
@@ -76,6 +80,15 @@ class auth extends CI_Controller
                 redirect('auth/tiket', 'refresh');
             }
            
+        } else {
+            redirect('login', 'refresh');
+        }
+    }
+
+    public function stripePayment()
+    {
+        if ($this->session->userdata('level') == "user" and $this->session->userdata('status') == "Aktif") {
+            $this->load->view('auth/stripe/charge');
         } else {
             redirect('login', 'refresh');
         }

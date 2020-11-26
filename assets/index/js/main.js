@@ -338,7 +338,7 @@
 
 		fetch(url, fetchData);
 
- 		var endTime = new Date("21 Nov 2020 16:00:00");
+ 		var endTime = new Date("29 Nov 2020 15:00:00");
  		endTime = (Date.parse(endTime) / 1000);
 
  		var now = new Date();

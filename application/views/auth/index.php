@@ -121,9 +121,16 @@ $array = array(
                         </div>
                     </div>
                     <div class="col-md-6 pb-4 pb-lg-0 col-lg-2 mt-2">
-                        <div class="text">
-                            <p class="mb-0"><a href="#" class="btn btn-primary py-3">Buy Tickets</a></p>
-                        </div>
+                        <?php if ($this->session->userdata('user')) { ?>
+                            <?php require_once('stripe/config.php') ?>
+                            <form action="<?= base_url(); ?>auth/stripePayment" method="post">
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<?php echo $stripe['publishable_key']; ?>" data-description="Access for a year" data-amount="5000" data-locale="auto"></script>
+                            </form>
+                        <?php } else { ?>
+                            <div class="text">
+                                <p class="mb-0"><a href="#" class="btn btn-primary py-3">Login to Buy</a></p>
+                            </div>
+                        <?php } ?>
                     </div>
                     </div>
                 </div>
@@ -311,7 +318,8 @@ $array = array(
         <div class="row">
             <div class="col-md-12 ftco-animate">
                 <div class="carousel-team owl-carousel">
-                    <?php $i=0; foreach ($teams as $value) : ?>
+                    <?php $i = 0;
+                    foreach ($teams as $value) : ?>
                         <div class="item">
                             <div class="team-wrap text-center">
                                 <div class="img"><img class="img" src="<?= base_url($array[$i]); ?>" alt=""></div>
