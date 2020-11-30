@@ -5,8 +5,8 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_karyawan"><i class="fas fa-sm fa-plus"></i> Tambah Karyawan</button>
-    <a href="<?= base_url('admin/member/laporan_pdf') ?>"><button class="btn btn-sm btn-danger mb-3"><i class="fas fa-file-pdf"></i> Export PDF</button></a>
+    <!-- <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_karyawan"><i class="fas fa-sm fa-plus"></i> Tambah Karyawan</button> -->
+    <!-- <a href="<?= base_url('admin/member/laporan_pdf') ?>"><button class="btn btn-sm btn-danger mb-3"><i class="fas fa-file-pdf"></i> Export PDF</button></a> -->
 
     <table class="table table-bordered table-striped table-hover" id="list_member">
         <thead>

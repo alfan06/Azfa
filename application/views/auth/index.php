@@ -1,7 +1,7 @@
 <?php
 $uri = 'http://api.football-data.org/v2/competitions/2021/standings';
 $uri2 = 'http://api.football-data.org/v2/teams/66';
-
+$uri3 = 'https://api.football-data.org/v2/teams/66/matches?status=FINISHED';
 $uri4 = 'https://api.football-data.org/v2/teams/66/matches?status=SCHEDULED';
 $opts = array(
     'http' => array(
@@ -14,15 +14,18 @@ $opts = array(
 $stream_context = stream_context_create($opts);
 $response = file_get_contents($uri, false, $stream_context);
 $response2 = file_get_contents($uri2, false, $stream_context);
+$response3 = file_get_contents($uri3, false, $stream_context);
 $response4 = file_get_contents($uri4, false, $stream_context);
 // $matches = var_dump($response);
 $json = json_decode($response, true);
 $json2 = json_decode($response2, true);
+$json3 = json_decode($response3, true);
 $json4 = json_decode($response4, true);
 
 $standing = $json['standings'][0]['table'];
 $teams = $json2['squad'];
 $match = $json4['matches'];
+$recent = $json3['matches'];
 
 // $image = array('assets/index/images/GGMU/Aaron_Wan-Bissaka.png', 'assets/index/images/GGMU/Alex_Telles.png');
 $array = array(
@@ -69,7 +72,7 @@ $array = array(
                 <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Welcome to Azfa Tickets</h1>
                 <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">You can buy Manchester United Tickets.</p>
                 <p class="d-flex align-items-center">
-                    <a href="https://www.youtube.com/watch?v=7UY1DJTWr2k" class="icon-video popup-vimeo d-flex justify-content-center align-items-center mr-3">
+                    <a href="https://www.youtube.com/watch?v=-jerCpS2GFM" class="icon-video popup-vimeo d-flex justify-content-center align-items-center mr-3">
                         <span class="ion-ios-play"></span>
                     </a>
 
@@ -165,16 +168,13 @@ $array = array(
                             </div>
                         </div>
                     </div>
-
-                    <div class="text-center">
-                        <p><a href="#" class="btn btn-primary">More Details</a></p>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-6 d-flex align-items-stretch">
-                <div class="img d-flex align-items-center justify-content-center py-5" style="background-image: url('assets/indeximages/victory.jpg'); width: 100%;">
+                <!-- <div class="img d-flex align-items-center justify-content-center py-5" style="background-image: url('assets/index/images/bg_2.jpg'); width: 100%;"> -->
                     <p class="text-center mb-0 py-5">
-                        <a href="https://vimeo.com/45830194" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3">
+                        <!-- <a href="https://youtu.be/5wZzMyf6wLM" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3"> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yX8f5bRYtXI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <span class="ion-ios-play"></span>
                         </a>
                         <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
@@ -267,37 +267,28 @@ $array = array(
         <div class="row d-flex">
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><span class="flaticon-american-football"></span></div>
+                    <div class="icon"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Senior Team</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
+                        <h3 class="heading mb-3"></h3>
+                        <p></p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><span class="flaticon-american-football-1"></span></div>
+                    <div class="icon"><span class="icon icon-phone"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">For Kids</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
+                        <h3 class="heading mb-3"><a href="<?= base_url(); ?>auth/contact">Phone</a></h3>
+                        <p>If u have compliment,u can send call to our admin</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-flex">
-                    <div class="icon"><span class="flaticon-lockers"></span></div>
+                    <div class="icon"><span class="icon icon-envelope"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Football Schools</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                    <div class="icon"><span class="flaticon-strategy"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Basic Tactics</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
+                        <h3 class="heading mb-3"><a href="<?= base_url(); ?>auth/contact">Email</a></h3>
+                        <p>If u have anything to ask,u can send email to our admin</p>
                     </div>
                 </div>
             </div>
@@ -376,48 +367,6 @@ $array = array(
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="item">
-                        <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image:url('assets/index/images/person_3.jpg')">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text p-3">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Arthur Browner</p>
-                                <span class="position">Viewer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image:url('assets/index/images/person_4.jpg');">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text p-3">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Arthur Browner</p>
-                                <span class="position">Viewer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image:url('assets/index/images/person_3.jpg');">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text p-3">
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Arthur Browner</p>
-                                <span class="position">Viewer</span>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -429,8 +378,9 @@ $array = array(
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10 text-wrap text-center heading-section heading-section-white ftco-animate">
-                    <h2>Subcribe to our upcoming match</h2>
-                    <div class="row d-flex justify-content-center mt-4 mb-4">
+                    <!-- <h2>Subcribe to our upcoming match</h2> -->
+                    <h2 class="mb-4">THE <span>RED</span> DEVILS</h2>
+                    <!-- <div class="row d-flex justify-content-center mt-4 mb-4">
                         <div class="col-md-10">
                             <form action="#" class="subscribe-form">
                                 <div class="form-group d-flex">
@@ -439,7 +389,7 @@ $array = array(
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

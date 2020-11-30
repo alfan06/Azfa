@@ -22,10 +22,12 @@ var_dump($response4);
 // $matches = var_dump($response);
 $json = json_decode($response, true);
 $json2 = json_decode($response2, true);
+$json3 = json_decode($response3, true);
 
 // var_dump($json2);
 
 $standing = $json['standings'][0]['table'];
 $teams = $json2['squad'];
+$recent = $json3['matches'];
 
 ?>

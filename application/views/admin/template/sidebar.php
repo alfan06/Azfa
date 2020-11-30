@@ -7,7 +7,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin/index') ?>">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-user"></i>
                 </div>
@@ -19,7 +19,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('admin/dashboard') ?>">
+                <a class="nav-link" href="<?php echo base_url('admin/index') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -39,28 +39,7 @@
                     <span>User</span></a>
             </li>
 
-            <!-- Nav Item - Data Barang -->
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/data_barang') ?>">
-                    <i class="fas fa-clipboard-list"></i>
-                    <span>Data Barang</span></a>
-            </li>
-
-            <!-- Nav Item - Laporan Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-file-alt"></i>
-                    <span>Laporan</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Jenis Laporan:</h6>
-                        <a class="collapse-item" href="">Absensi Pegawai</a>
-                        <a class="collapse-item" href="<?= base_url('admin/laporan_transaksi') ?>">Transaksi</a>
-                        <a class="collapse-item" href="">Supply</a>
-                    </div>
-                </div>
-            </li>
+        
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -130,18 +109,6 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?php echo base_url() ?>admin/logout">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

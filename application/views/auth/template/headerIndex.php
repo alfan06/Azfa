@@ -61,7 +61,6 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="<?= base_url(); ?>auth" class="nav-link">Home</a></li>
           <li class="nav-item active"><a href="<?= base_url(); ?>auth/about" class="nav-link">About</a></li>
-          <li class="nav-item active"><a href="<?= base_url(); ?>auth/tiket" class="nav-link">Tiket</a></li>
           <li class="nav-item active"><a href="<?= base_url(); ?>auth/contact" class="nav-link">Contact</a></li>
           <?php if ($this->session->userdata('user')) { ?>
             <li class="nav-item dropdown active">

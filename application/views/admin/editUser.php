@@ -8,7 +8,7 @@
             </div>
         <?php endif ?>
         <form method="POST">
-        <input type="hidden" name="id_user" value="<?= $user->id_user; ?>">
+            <input type="hidden" name="id_user" value="<?= $user->id_user; ?>">
             <div class="form-group">
                 <label>Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="<?= $user->nama; ?>">

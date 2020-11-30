@@ -55,83 +55,86 @@
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section text-center ftco-animate">
                 <span class="subheading">Blog</span>
-                <h2>Recent News</h2>
+                <h2>A News</h2>
             </div>
         </div>
         <div class="row d-flex">
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry justify-content-end">
                     <a href="#">
-                        <img src="<?= base_url('assets/index/images/GGMU/Jesse Lingard.png'); ?>" class="block-20" alt="">
+                        <img src="<?= base_url('assets/index/images/Mu.png'); ?>" class="block-20" alt="">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-                            <div class="one">
+                            <!-- <div class="one">
                                 <span class="day mr-1">08</span>
-                            </div>
+                            </div> -->
                             <div class="two">
-                                <span class="yr">2020</span>
-                                <span class="mos">November</span>
+                                <span class="yr">It's a</span>
+                                <span class="mos">NEWS</span>
                             </div>
                         </div>
-                        <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                        <h3 class="heading"><a href="https://www.manutd.com/en/news/detail/donny-van-de-beek-posts-photo-of-swollen-ankle-after-southampton-2-man-utd-3">HOW DONNY PLAYED THROUGH PAIN TO HELP UNITED WIN</a></h3>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry justify-content-end">
                     <a href="#">
-                        <img src="<?= base_url('assets/index/images/GGMU/OLE.png'); ?>" class="block-20" alt="">
+                        <!-- <img src="<?= base_url('assets/index/images/GGMU/OLE.png'); ?>" class="block-20" alt=""> -->
+                        <img src="<?= base_url('assets/index/images/Mu.png'); ?>" class="block-20" alt="">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-                            <div class="one">
-                                <span class="day mr-1">07</span>
-                            </div>
+                            <!-- <div class="one">
+                                <span class="day mr-1">08</span>
+                            </div> -->
                             <div class="two">
-                                <span class="yr">2020</span>
-                                <span class="mos">November</span>
+                                <span class="yr">It's a</span>
+                                <span class="mos">NEWS</span>
                             </div>
                         </div>
-                        <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                        <h3 class="heading"><a href="https://www.manutd.com/en/news/detail/emirates-fa-cup-third-round-draw-on-monday-30-nov-preview?t=y&utm_source=twitter&utm_medium=post&utm_campaign=appandweb&utm_content=vandebeekplayingthroughpain20201130">UNITED AWAIT EMIRATES FA CUP THIRD-ROUND DRAW</a></h3>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry">
                     <a href="#">
-                        <img src="<?= base_url('assets/index/images/GGMU/Paul  Pogba.png'); ?>" class="block-20" alt="">
+                        <!-- <img src="<?= base_url('assets/index/images/GGMU/Paul  Pogba.png'); ?>" class="block-20" alt=""> -->
+                        <img src="<?= base_url('assets/index/images/Mu.png'); ?>" class="block-20" alt="">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 mb-4 topp">
-                            <div class="one">
-                                <span class="day mr-1">07</span>
-                            </div>
+                            <!-- <div class="one">
+                                <span class="day mr-1">08</span>
+                            </div> -->
                             <div class="two">
-                                <span class="yr">2020</span>
-                                <span class="mos">November</span>
+                                <span class="yr">It's a</span>
+                                <span class="mos">NEWS</span>
                             </div>
                         </div>
-                        <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                        <h3 class="heading"><a href="https://www.manutd.com/en/news/detail/ole-reveals-advice-from-sir-alex-for-strikers-as-he-discusses-cavani">OLE RECALLS SIR ALEX'S WISE WORDS ON STRIKERS</a></h3>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="blog-entry">
                     <a href="#">
-                        <img src="<?= base_url('assets/index/images/GGMU/David de Gea.png'); ?>" class="block-20" alt="">
+                        <!-- <img src="<?= base_url('assets/index/images/GGMU/David de Gea.png'); ?>" class="block-20" alt=""> -->
+                        <img src="<?= base_url('assets/index/images/Mu.png'); ?>" class="block-20" alt="">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-                            <div class="one">
-                                <span class="day mr-1">06</span>
-                            </div>
+                            <!-- <div class="one">
+                                <span class="day mr-1">08</span>
+                            </div> -->
                             <div class="two">
-                                <span class="yr">2020</span>
-                                <span class="mos">November</span>
+                                <span class="yr">It's a</span>
+                                <span class="mos">NEWS</span>
                             </div>
                         </div>
-                        <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                        <h3 class="heading"><a href="https://www.manutd.com/en/news/detail/david-de-gea-injury-update-after-being-withdrawn-at-southampton">THE LATEST NEWS ON DE GEA'S KNEE INJURY</a></h3>
                     </div>
                 </div>
             </div>
