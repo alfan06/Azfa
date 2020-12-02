@@ -3,6 +3,8 @@ $uri = 'http://api.football-data.org/v2/competitions/2021/standings';
 $uri2 = 'http://api.football-data.org/v2/teams/66';
 $uri3 = 'https://api.football-data.org/v2/teams/66/matches?status=FINISHED';
 $uri4 = 'https://api.football-data.org/v2/teams/66/matches?status=SCHEDULED';
+$uri5 = 'http://api.football-data.org/v2/competitions/2021/teams';
+
 $opts = array(
     'http' => array(
         'method' => "GET",
@@ -16,16 +18,20 @@ $response = file_get_contents($uri, false, $stream_context);
 $response2 = file_get_contents($uri2, false, $stream_context);
 $response3 = file_get_contents($uri3, false, $stream_context);
 $response4 = file_get_contents($uri4, false, $stream_context);
+$response5 = file_get_contents($uri5, false, $stream_context);
+
 // $matches = var_dump($response);
 $json = json_decode($response, true);
 $json2 = json_decode($response2, true);
 $json3 = json_decode($response3, true);
 $json4 = json_decode($response4, true);
+$json5 = json_decode($response5, true);
 
 $standing = $json['standings'][0]['table'];
 $teams = $json2['squad'];
 $match = $json4['matches'];
 $recent = $json3['matches'];
+$image = $json5['teams'];
 
 // $image = array('assets/index/images/GGMU/Aaron_Wan-Bissaka.png', 'assets/index/images/GGMU/Alex_Telles.png');
 $array = array(
@@ -147,41 +153,55 @@ $array = array(
         <div class="row">
             <div class="col-lg-6">
                 <div class="heading-section ftco-animate">
-                    <span class="subheading">Game Report</span>
-                    <h2 class="mb-4">Great Win In Final Game</h2>
+                    <span class="subheading text-center">Game Report</span>
+                    <h2 class="mb-4 text-center">Recent Match</h2>
                 </div>
-                <div class="scoreboard mb-5 mb-lg-0">
-                    <div class="divider text-center"><span>Tue. Feb 21, 2019; FIFA Champions League</span></div>
-                    <div class="d-sm-flex mb-4">
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo" style="background-image: url('assets/index/images/team-1.jpg');"></div>
-                            <div class="text-center px-1 px-md-3 desc">
-                                <h3 class="score win"><span>3</span></h3>
-                                <h4 class="team-name">Knight Warrior</h4>
+                <?php $numItems = count($recent);
+                $i = 0;
+                foreach ($recent as $value) : ?>
+                    <?php if (++$i === $numItems) { ?>
+                        <div class="scoreboard mb-5 mb-lg-0">
+                            <div class="divider text-center"><span><?php echo date("D M j Y", strtotime($value['utcDate'])); ?></span></div>
+                            <div class="d-sm-flex mb-4">
+                                <div class="sport-team d-flex align-items-center">
+                                    <?php foreach ($image as $value2) : ?>
+                                        <?php if ($value['homeTeam']['name'] == $value2['name']) { ?>
+                                            <img src="<?= $value2['crestUrl']; ?>" class="img logo" alt="">
+                                        <?php } else {
+                                            continue;
+                                        } ?>
+                                    <?php endforeach; ?>
+                                    <div class="text-center px-1 px-md-3 desc">
+                                        <h3 class="score <?php if ((int)$value['score']['fullTime']['homeTeam'] > (int)$value['score']['fullTime']['awayTeam']) {echo 'win';} else{echo 'lost';} ?>"><span><?php echo $value['score']['fullTime']['homeTeam'] ?></span></h3>
+                                        <h4 class="team-name"><?php echo $value['homeTeam']['name']; ?></h4>
+                                    </div>
+                                </div>
+                                <div class="sport-team d-flex align-items-center">
+                                    <?php foreach ($image as $value2) : ?>
+                                        <?php if ($value['awayTeam']['name'] == $value2['name']) { ?>
+                                            <img src="<?= $value2['crestUrl']; ?>" class="img logo order-sm-last" alt="">
+                                        <?php } else {
+                                            continue;
+                                        } ?>
+                                    <?php endforeach; ?>
+                                    <div class="text-center px-1 px-md-3 desc">
+                                        <h3 class="score <?php if ((int)$value['score']['fullTime']['awayTeam'] > (int)$value['score']['fullTime']['homeTeam']) {echo 'win';} else{echo 'lost';} ?>"><span><?php echo $value['score']['fullTime']['awayTeam']; ?></span></h3>
+                                        <h4 class="team-name"><?php echo $value['awayTeam']['name']; ?></h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="sport-team d-flex align-items-center">
-                            <div class="img logo order-sm-last" style="background-image: url('assets/index/images/team-2.jpg');"></div>
-                            <div class="text-center px-1 px-md-3 desc">
-                                <h3 class="score lost"><span>1</span></h3>
-                                <h4 class="team-name">Mighty Falcons</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <?php } ?>
+                <?php endforeach; ?>
             </div>
             <div class="col-lg-6 d-flex align-items-stretch">
                 <!-- <div class="img d-flex align-items-center justify-content-center py-5" style="background-image: url('assets/index/images/bg_2.jpg'); width: 100%;"> -->
-                    <p class="text-center mb-0 py-5">
-                        <!-- <a href="https://youtu.be/5wZzMyf6wLM" class="icon-video-2 popup-vimeo d-flex justify-content-center align-items-center mr-3"> -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yX8f5bRYtXI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <span class="ion-ios-play"></span>
-                        </a>
-                        <small style="color: rgba(255,255,255,1); font-size: 16px;">Watch Highlights</small>
-                    </p>
-                </div>
+                <p class="text-center mb-0 py-5">
+                    <iframe width="560" height="320" src="https://www.youtube.com/embed/mtUOQaBbaNY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
